@@ -1,0 +1,77 @@
+msgid "Password"
+msgstr "Senha"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Created"
+msgstr "Criado"
+
+msgid "Modified"
+msgstr "Modificado"
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Delete"
+msgstr "Deletar"
+
+msgid "Users"
+msgstr "Usuários"
+
+msgid "Search"
+msgstr "Pesquisar"
+
+msgid "Products"
+msgstr "Produtos"
+
+msgid "News"
+msgstr "Notícias"
+
+msgid "Categories"
+msgstr "Categorias"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Dashboard"
+msgstr "Painel"
+
+msgid "Log out"
+msgstr "Sair"
+
+msgid "Add"
+msgstr "Adicionar"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Add User"
+msgstr "Adicionar usuário"
+
+msgid "Edit user"
+msgstr "Editar usuário"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "Tem certeza de que deseja excluir %s?"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Add category"
+msgstr "Adicionar categoria"
+
+msgid "Edit category"
+msgstr "Editar categoria"
+
+msgid "New User"
+msgstr "Novo Usúario"

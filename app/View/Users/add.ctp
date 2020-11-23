@@ -1,13 +1,12 @@
 <div class="content">
 	<div class="row">
 		<div class="col-md-8">
-		<?php echo $this->Form->create('News'); ?>
+		<?php echo $this->Form->create('User'); ?>
 			<div class="card">
 				<div class="card-header">
 					<h5 class="title">
-						<?php echo __('Edit News'); ?>
+						<?php echo __('Add User'); ?>
 					</h5>
-					<?php echo $this->Form->input('id'); ?>
 				</div>
 				<div class="card-body">
 
@@ -16,9 +15,9 @@
 							<div class="form-group">
 							<?php
 								echo $this->Form->input(
-									'title',
+									'name',
 									array(
-										'label' => 'Title',
+										'label' => __('Name'),
 										'class' => 'form-control'
 									)
 								);
@@ -32,12 +31,10 @@
 							<div class="form-group">
 							<?php
 								echo $this->Form->input(
-									'description',
+									'email',
 									array(
-										'type' => 'textarea',
-										'label' => 'Description',
-										'class' => 'form-control',
-										'rows' => 3
+										'label' => __('E-mail'),
+										'class' => 'form-control'
 									)
 								);
 							?>
@@ -46,13 +43,13 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 pr-md-1">
+						<div class="col-md-12">
 							<div class="form-group">
 							<?php
 								echo $this->Form->input(
-									'category_id',
+									'password',
 									array(
-										'label' => 'Category',
+										'label' => __('Password'),
 										'class' => 'form-control'
 									)
 								);
@@ -63,7 +60,7 @@
 
 				</div>
 				<div class="card-footer">
-					<button type="submit" class="btn btn-fill btn-primary">Save</button>
+					<button type="submit" class="btn btn-fill btn-primary"><?php echo __('Add'); ?></button>
 				</div>
 			</div>
 			<?php echo $this->Form->end(); ?>

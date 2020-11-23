@@ -1,26 +1,26 @@
-<footer>
-	<?php
-	echo $this->Html->script('jquery-2.2.4');
-	echo $this->Html->script('bootstrap');
-	echo $this->Html->script(
-		array(
-			'dashboard-demo',
-			'dataTables.bootstrap',
-			'excanvas.min',
-			'flot-demo',
-			'jquery.dataTables',
-			'jquery.flot',
-			'jquery.flot.pie',
-			'jquery.flot.resize',
-			'jquery.flot.tooltip.min',
-			'jquery.metisMenu',
-			'morris',
-			'morris-demo',
-			'pace',
-			'raphael-2.1.0.min',
-			'siminta'
-		)
-	);
-	?>
-	<?php echo $this->fetch('script'); ?>
+<footer class="footer">
+	<div class="container-fluid">
+		<ul class="nav">
+			<li class="nav-item">
+				<a href="<?php echo $this->Html->url('/'); ?>" class="nav-link">
+					Dashboard
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo $this->Html->url('https://devbsb.com.br'); ?>" class="nav-link" target="_blank">
+					DevBSB
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo $this->Html->url('https://blog.devbsb.com.br'); ?>" class="nav-link" target="_blank">
+					Blog
+				</a>
+			</li>
+		</ul>
+		<div class="copyright">
+			©
+			2020 criado com <i class="tim-icons icon-heart-2"></i> por
+			<a href="<?php echo $this->Html->url('https://devbsb.com.br'); ?>" target="_blank">DEVBSB</a> para estudos.
+		</div>
+	</div>
 </footer>

@@ -1,19 +1,39 @@
-<div class="categories form">
-<?php echo $this->Form->create('Category'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Category'); ?></legend>
-	<?php
-		echo $this->Form->input('name');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<div class="content">
+	<div class="row">
+		<div class="col-md-8">
+		<?php echo $this->Form->create('Category'); ?>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="title">
+						<?php echo __('Add category'); ?>
+					</h5>
+				</div>
+				<div class="card-body">
 
-		<li><?php echo $this->Html->link(__('List Categories'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List News'), array('controller' => 'news', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New News'), array('controller' => 'news', 'action' => 'add')); ?> </li>
-	</ul>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+							<?php
+								echo $this->Form->input(
+									'name',
+									array(
+										'label' => __('Title'),
+										'class' => 'form-control'
+									)
+								);
+							?>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-footer">
+					<button type="submit" class="btn btn-fill btn-primary"><?php echo __('Add'); ?></button>
+				</div>
+			</div>
+			<?php echo $this->Form->end(); ?>
+		</div>
+	</div>
 </div>
+
+

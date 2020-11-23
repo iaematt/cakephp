@@ -1,31 +1,27 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php //echo $cakeDescription ?>
+		DevBSB |
 		<?php echo $this->fetch('title'); ?>
 	</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<?php
 		echo $this->Html->meta('icon');
 
-		// echo $this->Html->css('cake.generic'); // default
-		echo $this->Html->css('bootstrap');
+		/**
+		 * IMPORT CSS TEMPLATE
+		 */
 		echo $this->Html->css(
 			array(
-				'dataTables.bootstrap',
-				'main-style',
-				'morris-0.4.3.min',
-				'pace-theme-big-counter',
-				'social-buttons',
-				'style',
-				'timeline'
+				'demo',
+				'black-dashboard',
+				'nucleo-icons'
 			)
 		);
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
-
-
-
 	?>
 </head>

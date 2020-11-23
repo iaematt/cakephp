@@ -1,21 +1,38 @@
-<div class="categories form">
-<?php echo $this->Form->create('Category'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Category'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<div class="content">
+	<div class="row">
+		<div class="col-md-8">
+		<?php echo $this->Form->create('Category'); ?>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="title">
+						<?php echo __('Edit category'); ?>
+					</h5>
+					<?php echo $this->Form->input('id'); ?>
+				</div>
+				<div class="card-body">
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Category.id')), array('confirm' => __('Are you sure you want to delete # %s?', $this->Form->value('Category.id')))); ?></li>
-		<li><?php echo $this->Html->link(__('List Categories'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List News'), array('controller' => 'news', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New News'), array('controller' => 'news', 'action' => 'add')); ?> </li>
-	</ul>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+							<?php
+								echo $this->Form->input(
+									'name',
+									array(
+										'label' => __('Title'),
+										'class' => 'form-control'
+									)
+								);
+							?>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-footer">
+					<button type="submit" class="btn btn-fill btn-primary"><?php echo __('Save'); ?></button>
+				</div>
+			</div>
+			<?php echo $this->Form->end(); ?>
+		</div>
+	</div>
 </div>

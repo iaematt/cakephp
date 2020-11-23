@@ -1,13 +1,12 @@
 <div class="content">
 	<div class="row">
 		<div class="col-md-8">
-		<?php echo $this->Form->create('News'); ?>
+		<?php echo $this->Form->create('Product'); ?>
 			<div class="card">
 				<div class="card-header">
 					<h5 class="title">
-						<?php echo __('Edit News'); ?>
+						<?php echo __('Add product'); ?>
 					</h5>
-					<?php echo $this->Form->input('id'); ?>
 				</div>
 				<div class="card-body">
 
@@ -19,6 +18,22 @@
 									'title',
 									array(
 										'label' => 'Title',
+										'class' => 'form-control'
+									)
+								);
+							?>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+							<?php
+								echo $this->Form->input(
+									'ref',
+									array(
+										'label' => 'Ref number',
 										'class' => 'form-control'
 									)
 								);
@@ -46,13 +61,13 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-6 pr-md-1">
+						<div class="col-md-12">
 							<div class="form-group">
 							<?php
 								echo $this->Form->input(
-									'category_id',
+									'tags',
 									array(
-										'label' => 'Category',
+										'label' => 'Tags',
 										'class' => 'form-control'
 									)
 								);

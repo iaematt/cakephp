@@ -1,21 +1,71 @@
-<div class="news form">
-<?php echo $this->Form->create('News'); ?>
-	<fieldset>
-		<legend><?php echo __('Add News'); ?></legend>
-	<?php
-		echo $this->Form->input('title');
-		echo $this->Form->input('description');
-		echo $this->Form->input('category_id');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<div class="content">
+	<div class="row">
+		<div class="col-md-8">
+		<?php echo $this->Form->create('News'); ?>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="title">
+						<?php echo __('Add news'); ?>
+					</h5>
+				</div>
+				<div class="card-body">
 
-		<li><?php echo $this->Html->link(__('List News'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Categories'), array('controller' => 'categories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Category'), array('controller' => 'categories', 'action' => 'add')); ?> </li>
-	</ul>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+							<?php
+								echo $this->Form->input(
+									'title',
+									array(
+										'label' => 'Title',
+										'class' => 'form-control'
+									)
+								);
+							?>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+							<?php
+								echo $this->Form->input(
+									'description',
+									array(
+										'type' => 'textarea',
+										'label' => 'Description',
+										'class' => 'form-control',
+										'rows' => 3
+									)
+								);
+							?>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 pr-md-1">
+							<div class="form-group">
+							<?php
+								echo $this->Form->input(
+									'category_id',
+									array(
+										'label' => 'Category',
+										'class' => 'form-control'
+									)
+								);
+							?>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-footer">
+					<button type="submit" class="btn btn-fill btn-primary">Add</button>
+				</div>
+			</div>
+			<?php echo $this->Form->end(); ?>
+		</div>
+	</div>
 </div>
