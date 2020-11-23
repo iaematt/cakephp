@@ -18,7 +18,7 @@
 								echo $this->Form->input(
 									'title',
 									array(
-										'label' => 'Title',
+										'label' => _('Title'),
 										'class' => 'form-control'
 									)
 								);
@@ -35,7 +35,7 @@
 									'description',
 									array(
 										'type' => 'textarea',
-										'label' => 'Description',
+										'label' => __('Description'),
 										'class' => 'form-control',
 										'rows' => 3
 									)
@@ -52,7 +52,7 @@
 								echo $this->Form->input(
 									'category_id',
 									array(
-										'label' => 'Category',
+										'label' => __('Category'),
 										'class' => 'form-control'
 									)
 								);
@@ -63,7 +63,7 @@
 
 				</div>
 				<div class="card-footer">
-					<button type="submit" class="btn btn-fill btn-primary">Save</button>
+					<button type="submit" class="btn btn-fill btn-primary"><?php echo __('Save'); ?></button>
 				</div>
 			</div>
 			<?php echo $this->Form->end(); ?>

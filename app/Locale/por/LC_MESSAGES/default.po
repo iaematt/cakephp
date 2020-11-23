@@ -1,6 +1,9 @@
 msgid "Password"
 msgstr "Senha"
 
+msgid "Email"
+msgstr "E-mail"
+
 msgid "Name"
 msgstr "Nome"
 
@@ -74,4 +77,91 @@ msgid "Edit category"
 msgstr "Editar categoria"
 
 msgid "New User"
-msgstr "Novo Usúario"
+msgstr "Novo usúario"
+
+msgid "Login"
+msgstr "Entrar"
+
+msgid "Not registered?"
+msgstr "Ainda não está registrado?"
+
+msgid "Create an account"
+msgstr "Crie uma conta"
+
+msgid "Create"
+msgstr "Criar"
+
+msgid "Already registered?"
+msgstr "Já está registrado?"
+
+msgid "Sign In"
+msgstr "Entrar"
+
+msgid "Invalid user"
+msgstr "Usuário inválido"
+
+msgid "The user has been saved."
+msgstr "O usuário foi salvo."
+
+msgid "The user could not be saved. Please, try again."
+msgstr "O usuário não foi salvo. Por favor, tente novamente."
+
+msgid "The user has been deleted."
+msgstr "O usuário foi deletado."
+
+msgid "The user could not be deleted. Please, try again."
+msgstr "O usuário não foi deletado. Por favor, tente novamente."
+
+msgid "Error, not authorized."
+msgstr "Erro, não autorizado."
+
+msgid "New Product"
+msgstr "Novo produto"
+
+msgid "Add product"
+msgstr "Adicionar produto"
+
+msgid "Ref"
+msgstr "Número de referência"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "Edit product"
+msgstr "Editar produto"
+
+msgid "Product has been add."
+msgstr "O produto foi adicionado."
+
+msgid "Error, product not add!"
+msgstr "Erro, o produto não foi adicionado!"
+
+msgid "Product has been modified."
+msgstr "O produto foi modificado."
+
+msgid "Error, product not modified."
+msgstr "Erro, o produto não foi modificado."
+
+msgid "Invalid product"
+msgstr "Produto inválido"
+
+msgid "The product has been deleted."
+msgstr "O produto foi deletado."
+
+msgid "The product cloud not be deleted. Please, try again."
+msgstr "O produto não foi deletado. Por favor, tente novamente."
+
+msgid "You are not authorized to access that location."
+msgstr "Você não tem permissão para acessar essa página."
+
+msgid "New News"
+msgstr "Nova notícia"
+
+msgid "New Category"
+msgstr "Nova categoria"
+
+msgid "Edit News"
+msgstr "Editar notícia"
+
+msgid "Add News"
+msgstr "Adicionar notícia"

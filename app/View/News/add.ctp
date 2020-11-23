@@ -5,7 +5,7 @@
 			<div class="card">
 				<div class="card-header">
 					<h5 class="title">
-						<?php echo __('Add news'); ?>
+						<?php echo __('Add News'); ?>
 					</h5>
 				</div>
 				<div class="card-body">
@@ -17,7 +17,7 @@
 								echo $this->Form->input(
 									'title',
 									array(
-										'label' => 'Title',
+										'label' => __('Title'),
 										'class' => 'form-control'
 									)
 								);
@@ -34,7 +34,7 @@
 									'description',
 									array(
 										'type' => 'textarea',
-										'label' => 'Description',
+										'label' => __('Description'),
 										'class' => 'form-control',
 										'rows' => 3
 									)
@@ -51,7 +51,7 @@
 								echo $this->Form->input(
 									'category_id',
 									array(
-										'label' => 'Category',
+										'label' => __('Category'),
 										'class' => 'form-control'
 									)
 								);
@@ -62,7 +62,7 @@
 
 				</div>
 				<div class="card-footer">
-					<button type="submit" class="btn btn-fill btn-primary">Add</button>
+					<button type="submit" class="btn btn-fill btn-primary"><?php echo __('Add'); ?></button>
 				</div>
 			</div>
 			<?php echo $this->Form->end(); ?>

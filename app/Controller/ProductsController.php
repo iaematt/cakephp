@@ -18,29 +18,54 @@ class ProductsController extends AppController{
 			// debug($this->request->data) or die;
 
 			if($this->Product->save($this->request->data)) {
-				$this->Session->setFlash('Product has been saved!');
+				$this->Session->setFlash(__('Product has been add.'));
 				return $this->redirect(array('action' => 'index'));
 			}
 
-			$this->Session->setFlash('Error product not saved!');
+			$this->Session->setFlash(__('Error, product not add!'));
 
 		}
 	}
 
 	public function edit($id = null) {
+		if (!$this->Product->exists($id)) {
+			throw new NotFoundException(__('Invalid product'));
+		}
+
 		if ($this->request->is(array('post', 'put'))) {
 			if($this->Product->save($this->request->data)) {
-				$this->Session->setFlash('Product has been modified!');
+				$this->Session->setFlash(__('Product has been modified.'));
 				return $this->redirect(array('action' => 'index'));
 			}
 
-			$this->Session->setFlash('Error product not modified!');
+			$this->Session->setFlash(__('Error, product not modified.'));
 		}
 
 		$this->request->data = $this->Product->findById($id);
 	}
 
-	public function delete() {
+	/**
+	 * delete method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+	public function delete($id = null) {
+
+		if (!$this->Product->exists($id)) {
+			throw new NotFoundException(__('Invalid product'));
+		}
+
+		$this->request->allowMethod('post', 'delete');
+
+		if($this->Product->delete($id)) {
+			$this->Session->setFlash(__('The product has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The product cloud not be deleted. Please, try again.'));
+		}
+
+		return $this->redirect(array('action' => 'index'));
 
 	}
 

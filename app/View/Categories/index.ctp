@@ -1,6 +1,9 @@
 <div class="content">
 	<div class="row">
 		<div class="col-md-12">
+
+			<?php echo $this->Flash->render(); ?>
+
 			<div class="card ">
 				<div class="card-header">
 					<h4 class="card-title"><?php echo __('Categories'); ?></h4>

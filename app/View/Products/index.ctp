@@ -1,6 +1,9 @@
 <div class="content">
 	<div class="row">
 		<div class="col-md-12">
+
+			<?php echo $this->Flash->render(); ?>
+
 			<div class="card ">
 				<div class="card-header">
 					<h4 class="card-title"><?php echo __('Products'); ?></h4>
@@ -27,9 +30,8 @@
 									<td><?php echo h($product['Product']['description']); ?>&nbsp;</td>
 									<td><?php echo h($product['Product']['created']); ?>&nbsp;</td>
 									<td class="actions">
-										<!-- <?php echo $this->Html->link(__('View'), array('action' => 'view', $product['Product']['id'])); ?> -->
 										<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $product['Product']['id'])); ?>
-										<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $product['Product']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $product['Product']['id']))); ?>
+										<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $product['Product']['id']), array('confirm' => __('Are you sure you want to delete %s?', $product['Product']['title']))); ?>
 									</td>
 								</tr>
 								<?php endforeach; ?>
@@ -61,7 +63,7 @@
 
 			<h3><?php echo __('Actions'); ?></h3>
 
-				<?php echo $this->Html->link(__('New product'), array('action' => 'add'), array('class' => 'btn btn-fill btn-primary')); ?>
+				<?php echo $this->Html->link(__('New Product'), array('action' => 'add'), array('class' => 'btn btn-fill btn-primary')); ?>
 
 		</div>
 	</div>

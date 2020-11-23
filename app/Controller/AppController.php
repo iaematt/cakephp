@@ -42,13 +42,18 @@ class AppController extends Controller {
 		'Form'
 	);
 
+	public function initialize() {
+		parent::initialize();
+		$this->loadComponent('Flash');
+	}
+
 	function beforeFilter() {
 
 		// LOCALE
 		$locale = Configure::read('Config.language');
-    if ($locale && file_exists(APP . 'View' . DS . $locale . DS . $this->viewPath . DS . $this->view . $this->ext)) {
-        // e.g. use /app/View/fra/Pages/tos.ctp instead of /app/View/Pages/tos.ctp
-        $this->viewPath = $locale . DS . $this->viewPath;
+		if ($locale && file_exists(APP . 'View' . DS . $locale . DS . $this->viewPath . DS . $this->view . $this->ext)) {
+			// e.g. use /app/View/fra/Pages/tos.ctp instead of /app/View/Pages/tos.ctp
+			$this->viewPath = $locale . DS . $this->viewPath;
 		}
 
 		// AUTH
@@ -79,8 +84,8 @@ class AppController extends Controller {
 
 		$this->Auth->loginRedirect = array(
 			'plugin' => null,
-			'controller' => 'products',
-			'action' => 'index'
+			'controller' => 'pages',
+			'action' => 'home'
 		);
 
 		$this->Auth->error = __('Ops! You are not logged in.');
